@@ -7,9 +7,20 @@
 */
 
 /* 00 css variable */
+:root{
+    --body-color: hsl(10,50%,25%,0.8);
+}
 
 /* 01 color */
 body{
-    background-color: hsl(0,50,25);
-    color: hsla(0,0,0,0.8)
+    background-color: var(--body-color);
+}
+#zen-intro{
+    background-color: var(--page-color);
+}
+#zen-supporting{
+    background-color: var(--page-color);
+}
+.sidebar{
+    background-color: brown;
 }
