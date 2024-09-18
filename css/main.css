@@ -1,0 +1,15 @@
+/* style file by Ben C.
+=============================
+00: css varibale
+01: color
+02: 
+=============================
+*/
+
+/* 00 css variable */
+
+/* 01 color */
+body{
+    background-color: hsl(0,50,25);
+    color: hsla(0,0,0,0.8)
+}
