@@ -2,13 +2,26 @@
 =============================
 00: css varibale
 01: color
-02: 
+02: Layout
+03: Typography
 =============================
 */
 
 /* 00 css variable */
 :root{
-    --body-color: hsl(10,50%,25%,0.8);
+    --body-color: hsl(10,50%,25%);
+    --page-color: hsla(68, 39%, 72%, 1);
+    --sidebar-color: hsla(72, 46%, 69%, 1);
+    /** font color **/
+    --font-color:rgb(0,0,0);
+    
+    /** layout variables **/
+    --page-top-position: 85%;
+    --page-width:15%;
+    --bottom-bar-height: 15vh;
+    --bottom-bar-color: hsla(68,39%,72%,0.8);
+
+
 }
 
 /* 01 color */
@@ -22,5 +35,84 @@ body{
     background-color: var(--page-color);
 }
 .sidebar{
-    background-color: brown;
+    background-color: var(--sidebar-color);
 }
+h1{
+    /*finish */
+}
+
+/* 02 Layout */
+div.explanation, div.requirements, div.participation, div.benefits{
+    position: fixed;
+    width: var(--page-width);
+    top: var(--page-top-position);
+    background-image: url(../img/newspaper1.jpg);
+}
+
+div.explanation{
+    left:0%;
+}
+div.requirements{
+    left:20%
+}
+div.participation{
+    left:40%
+}
+div.benefits{
+    left:60%
+}
+
+aside.sidebar{
+    position: absolute;
+    top:0%;
+    right: 0;
+    bottom: 0;
+    /* adjist width/height*/
+
+}
+section.intro{
+    position:fixed;
+    
+    width:30%;
+    height:80%;
+
+}
+
+div.extra2{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:10%;
+    color:var(--page-color);
+}
+
+/*create tabs for the folder*/
+div.explanation.h3, div.requirements.h3, div.participation.h3, div.benefits.h3{
+    margin-top: -10%;
+    width: 12vw;
+    background-color:bisque;
+}
+
+/* 03 Typography*/
+
+header h2{
+
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type:none;
+}
+#design-selection h3{
+    visibility: hidden;
+}
+
+#css-resources{
+    display:none;
+}
+#design-archives{
+    visibility: hidden;
+}
+/* hide the archive section/resource section*/
