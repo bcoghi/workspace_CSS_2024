@@ -47,6 +47,8 @@ div.explanation, div.requirements, div.participation, div.benefits{
     width: var(--page-width);
     top: var(--page-top-position);
     background-image: url(../img/newspaper1.jpg);
+    
+    transition: all 1s ease-out;
 }
 
 div.explanation{
@@ -64,7 +66,7 @@ div.benefits{
 
 aside.sidebar{
     position: absolute;
-    top:0%;
+    top:20%;
     right: 0;
     bottom: 0;
     /* adjist width/height*/
@@ -72,13 +74,16 @@ aside.sidebar{
 }
 section.intro{
     position:fixed;
-    
+    left:30%;
+    bottom:10%;
     width:30%;
     height:80%;
+    background-image: url(../img/newspaper3.jpg);
 
+    transform: rotate(-10deg) translate(-100px,0);
 }
 
-div.extra2{
+div.extra1{
     position:fixed;
     bottom:0;
     left:0;
@@ -116,3 +121,92 @@ li{
     visibility: hidden;
 }
 /* hide the archive section/resource section*/
+
+
+/* 04, selector practice*/
+a:hover{
+    font-size:2em;
+}
+
+div.explanation:hover{
+    top:15vh;
+    height:90vh;
+}
+
+div.requirements:hover{
+    top:15vh;
+    height:90vh;
+}
+
+div.participation:hover{
+    top:15vh;
+    height:90vh;
+}
+
+div.benefits:hover{
+    top:15vh;
+    height:90vh;
+}
+
+p::first-letter{
+    font-size: larger;
+}
+
+p:nth-child(2n){
+    color:red;
+}
+p:nth-child(2n+1){
+    color:blue;
+}
+li:first-child{
+    font-weight:bold;
+}
+
+h1{
+    text-shadow:1px 1px 2px purple,
+    -1px -1px 2px blue,
+    2px -1px 2px red;
+}
+
+div.explanation.h3, div.requirements.h3, div.participation.h3, div.benefits.h3{
+    border-radius:10px;
+}
+
+/** list style image **/
+ul{
+    list-style-image: url(../img/star.png);
+}
+
+/**transform and transition **/
+section.intro h3 ~p{
+    opacity:1;
+    transition:all 3s ease-in-out;
+}
+section.intro h3:hover ~p{
+    transform: scale(0.2);
+    opacity:0;
+}
+
+@keyframes backandforth{
+    from{transform: translate(-500px, 0);}
+    25%{transform: translate(0px, 0)}
+    50%{transform: translate(250px,0);}
+    75%{transform: translate(375px,0);}
+    100%{transform: translate(450px,0);}
+}
+
+footer{
+    position: fixed;
+    bottom: 1vh;
+    left: 50%;
+    z-index: 4;
+    animation: 5s ease-in-out 1s alternate infinite backandforth;
+}
+
+/* 05 fun feature*/
+body{
+    /* clip-path: circle(60% at 50vw 50vh); */
+}
+aside.sidebar{
+    clip-path: polygon(0 0, 0 60%, 40% 90%,90% 60%,90% 0);
+}
