@@ -4,6 +4,9 @@
 01: color
 02: Layout
 03: Typography
+04: selector prcatice
+05: fun features
+__: css grid feature practice
 =============================
 */
 
@@ -17,9 +20,9 @@
     
     /** layout variables **/
     --page-top-position: 85%;
-    --page-width:15%;
-    --bottom-bar-height: 15vh;
-    --bottom-bar-color: hsla(68,39%,72%,0.8);
+    --page-width:15vw;
+    --bottom-bar-height: 10vh;
+    --bottom-bar-color: rgb(125, 116, 36);
 
 
 }
@@ -66,9 +69,9 @@ div.benefits{
 
 aside.sidebar{
     position: absolute;
-    top:20%;
+    top:15%;
     right: 0;
-    bottom: 0;
+    bottom: 5%;
     /* adjist width/height*/
 
 }
@@ -85,24 +88,48 @@ section.intro{
 
 div.extra1{
     position:fixed;
+    bottom:5%;
+    left:20%;
+    width:30%;
+    height:80%;
+    background-image: url(../img/newspaper2.jpg);
+    z-index:-1;
+    transform: rotate(15deg) translate(200px, -100px);
+}
+
+div.extra2{
+    position:fixed;
     bottom:0;
     left:0;
     width:100%;
-    height:10%;
-    color:var(--page-color);
+    height:15vh;
+    background-color:var(--bottom-bar-color);
+    
 }
 
 /*create tabs for the folder*/
-div.explanation.h3, div.requirements.h3, div.participation.h3, div.benefits.h3{
+div.explanation h3, div.requirements h3, div.participation h3, div.benefits h3{
     margin-top: -10%;
-    width: 12vw;
+    width: var(--page-width);
     background-color:bisque;
 }
 
 /* 03 Typography*/
+@font-face{
+    font-family: 'myfont';
+    src:url(../fonts/chunkfive.eot);
+}
 
+header h1{
+    font-family: 'myfont',sans-serif;
+    font-weight:150;
+    font-size: 1.25em;
+    letter-spacing: normal;
+    line-height: 1em;
+    text-transform: uppercase;
+}
 header h2{
-
+    font-family:Arial, Helvetica, sans-serif;
 }
 a{
     text-decoration: none;
@@ -118,12 +145,12 @@ li{
     display:none;
 }
 #design-archives{
-    visibility: hidden;
+    display:none;
 }
 /* hide the archive section/resource section*/
 
 
-/* 04, selector practice*/
+/* 04, selector practice, transform, transition*/
 a:hover{
     font-size:2em;
 }
@@ -168,8 +195,10 @@ h1{
     2px -1px 2px red;
 }
 
-div.explanation.h3, div.requirements.h3, div.participation.h3, div.benefits.h3{
-    border-radius:10px;
+div.explanation h3, div.requirements h3, div.participation h3, div.benefits h3{
+    border-top-left-radius:20px;
+    border-top: solid black 2px;
+    padding-left: 5px;
 }
 
 /** list style image **/
@@ -210,3 +239,34 @@ body{
 aside.sidebar{
     clip-path: polygon(0 0, 0 60%, 40% 90%,90% 60%,90% 0);
 }
+
+
+
+/* In class grid prcatice*/
+/*
+.one{
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+
+.two{
+  grid-column: 1/ 4;
+  grid-row: 1/2;
+}
+.three{
+  grid-column:1;
+  grid-row:2/4;
+}
+.four{
+  grid-column:4/5;
+  grid-row:1/3;
+}
+.five{
+  grid-column:1/4;
+  grid-row:4;
+}
+.six{
+  grid-column:3/5;
+  grid-row:3/5
+}
+*/
